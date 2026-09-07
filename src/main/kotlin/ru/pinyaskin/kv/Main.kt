@@ -6,6 +6,10 @@ fun main() {
 
   while (true) {
     val query = readln()
-    queryProcessor.process(query)
+    try {
+      queryProcessor.process(query)
+    } catch (e: Exception) {
+      println(e.message)
+    }
   }
 }
